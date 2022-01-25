@@ -1,0 +1,70 @@
+### index
+get http://localhost:3000/dogs
+
+### create
+post http://localhost:3000/dogs
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDMxNDg1MTF9.yNlFLM1H4uAkSrTcph86kM3BYSaYyqDnzkeAe1l1pw0
+Content-Type: application/json
+
+{
+  "name": "Mary",
+  "breed": "Rat Terrier",
+  "age": 14,
+  "user_id": 1
+}
+
+### show
+GET http://localhost:3000/dogs/3
+
+### Recipes Update
+PATCH http://localhost:3000/dogs/4
+Content-Type: application/json
+
+{
+  "name": "Fido"
+}
+
+### Destroy
+DELETE http://localhost:3000/dogs/4
+
+### Users create (signup)
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "Test name",
+  "email": "test@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+### Users create (signup)
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "Ryan Fitzpatrick",
+  "email": "fitz@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+### Users create (signup)
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "Kevin Schmidt",
+  "email": "KSt@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+### Sessions create (login)
+POST http://localhost:3000/sessions
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "password"
+}
